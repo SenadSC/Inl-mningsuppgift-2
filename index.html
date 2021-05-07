@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign up form">
+    <title>Inlämningsuppgift 2</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+
+    <div class="grid-container">
+
+      <!-- Div för vänstra(färgade) sidan -->
+      <div class="grid-child-left">
+          <header class="header-container">
+            <div class="content-wrapper">
+              <!-- <a href="#"> <strong>Asgard</strong></a> -->
+              <h2 class="Asgard">Asgard</h2>
+                <p>A cloud based community for you to connect with fellow Asgardians</p>
+                 <div class="img-robot">
+            <img class="img-offset" src="./images/robot.png" alt="" />
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- ENd child left -->
+
+    <!-- kolla upp denna main -->
+    <main> 
+
+      
+
+        <!-- Div för språkkontainern -->
+        <div class="language-container">
+          <p>English (USA)</p>
+          <i class="bi bi-caret-down-fill"></i>
+        </div>
+
+
+        <!-- Div för hela formuläret från "Sign up" till "create account" -->
+        <div class="grid-child-right">
+       <h1>Sign up as Asgard</h1>
+
+       <p>Already have an account? <a href="#">Log in</a>
+
+       <!-- Div för "sign up with google, facebook och apple" knapparna -->
+
+       <div class="button-container"> 
+          
+              <button class="button-google btn-ml"> <img src="./images/google.png" alt="googlesign">Sign up with Google</button>
+              <button class="button-facebook btn-ml"><img src="./images/facebook.png" alt=""></button>
+              <button class="button-apple btn-ml"><img src="./images/apple.png" alt=""></button>
+       </div>
+
+        <div class="or">
+          <p >- OR -</p>
+        </div>
+     
+       <form method="post">
+
+        <!-- Div för "Username" och understräcket -->
+        <div class="txt_field">
+          <input type="Username" required />
+          <span></span>
+          <label>Username</label>
+        </div>
+
+        <!--Div för "Email adress"  -->
+        <div class="txt_field">
+          <input type="email" required />
+          <span></span>
+          <label>Email adress</label>
+        </div>
+
+        <!-- div för "Password" -->
+        <div class="txt_field">
+          <input type="password" required />
+          <span></span>
+          <label>Password</label>
+        </div>
+
+        <!-- Div för Passwword strength -->
+        <div class="pwd_strength">
+          <span></span>
+          <label>Password strength:</label>
+
+          <!-- Div för password strength rutor -->
+          <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col_grey"></div>
+          </div>
+          
+        </div>
+       
+        <!-- Div för checkbox och texten intill den -->
+        <div class="pass">
+          <input type="checkbox" /> By creating account you accept our
+          <a href="#">Privacy Policy</a> <a href="#">Terms of Service</a> and
+          <a href="#">Notification Settings</a>
+        </div>
+        <!-- Div för "create account och dess ram" -->
+        <div class="btn-wrapper">
+          <input type="submit" value="Create Account" />
+        </div>
+       </form>
+       </div>
+
+       
+      </main>
+  
+
+  </body>
+</div>
+</html>
+

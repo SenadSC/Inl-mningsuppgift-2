@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+
+html {
+  font-size: 0.625;
+}
+
+/* Vänstra (färgade)delen av sidan */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px auto;
+  border-radius: 6px;
+}
+
+.header-container{
+  padding: 20px;
+}
+
+/* styling och placering av "Asgard" texten i vänstra sidan av skärmen */
+.header-container h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.grid-child-left {
+  background-color: blanchedalmond;
+  grid-column: 1 / 2;
+  width: 80%;
+  min-height: 100vh;
+  position: relative;
+}
+
+main{
+  grid-column: 2 / 5;
+}
+
+.grid-container h1 {
+  text-align: justify;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid rgb(253, 253, 253);
+}
+
+/* styling av robotbilden */
+.img-robot {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  width: 50%;
+  padding: 60%;
+}
+
+/* Styling för högra delen av sidan där "sign up formulären" finns */
+.grid-child-right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 100px auto;
+}
+
+/* Styling av alla p taggar i grid container*/
+.grid-container p {
+  color: #adadad;
+}
+
+ /* Val av färg för "Log in" texten */
+a{
+  color: rgb(38, 145, 211);
+}
+
+/* Här justerade jag "google, facebook och apple" knapparna i bredd, höjd och mellanrum 
+Försökte med grid men av någon anledning så funkade det inte */
+.button-container {
+  display: flex;
+  margin: 15px 0;
+  width: 80%;
+}
+
+/* Detta gjorde jag för att 
+få mellanrum mellan google, facebook och apple
+ikoner */
+.btn-ml + .btn-ml {
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+.button-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  border-radius: 6px;
+  margin-top: 50px;
+  height: 50px;
+  width: 80%;
+}
+
+/* google knappens ikon */
+.button-google img {
+  margin-right: 20px;
+  margin-top: 4px;
+}
+
+.button-facebook,
+.button-apple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 0% auto; 
+  width: 15%;
+}
+
+.or{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Markerad länktext utan understräck */
+a:link,
+a:visited,a:hover,a:active {
+  text-decoration: none;
+}
+
+.side form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.txt_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 40px 0;
+}
+
+/* Här stylar jag språkkontainern som är uppe i högra hörnet */
+.language-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+/* styling för raderna (username, email och password) i formulären */
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.txt_field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #adadad;
+  transition: 0.5s;
+}
+
+/* styling så username, email adress och password
+rör sig upp när man klickar */
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -5px;
+  color: #adadad;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+
+.pwd_strength {
+  color: #5e5e5e;
+}
+
+/* Här stylar jag checkboxen och texten intill */
+.pass {
+  margin: -10px 0px 60px 0px;
+  color: #adadad;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.pass a {
+  color: rgb(38, 145, 211);
+}
+
+/* Här stylar jag password strength kolumnerna, först 
+hela raden och därefter kolumn för kolumn */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  height: 8px;
+  
+  
+}
+.col,
+.col_grey {
+  border-radius: 2px;
+  background-color: rgb(38, 161, 38);
+}
+
+.col {
+  background-color: rgb(38, 161, 38);
+}
+
+.col_grey {
+  background-color: rgb(236, 233, 233);
+}
+/* End */
+
+/* Create account wrapper */
+.btn-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* Create account knappen */
+input[type="submit"] {
+
+  border: none;
+  height: 3rem;
+  background: #d64e18;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  width: 55%;
+}
+
+
+/* fasta px för googlebehållaren samt
+Förminskning av rubriken samt robotbilden vid 962px */
+@media (max-width: 1500px) {
+  .btn-ml .button-google{
+    width: 100px;
+  }
+  .img-offset {
+    width: 10rem;
+    height: 65%;
+  }
+}
+/* bredden på facebook och apple knapparn vid mindre
+än 1230px */
+@media (max-width: 1230px) {
+  .button-facebook,.button-apple{
+    width: 80px;
+  }
+  .btn-ml .button-google{
+    width: 120px;
+}
+
+/* Placering av robotbilden vid mindre bredd än 1170px */
+@media (max-width: 1170px) {
+  img.img-robot {
+    width: 20rem;
+    
+  }
+}
+
+/* Här justerar jag "sign in with google wrappern */
+@media (max-width: 1137px) {
+  .btn-ml .button-google{
+    width: 100px;
+  }
+  .googlesign{
+    font-size: 2px;
+  }
+  
+  .button-container{
+    font-size: 1.25rem;
+  }
+  }
+
+/* Försökte här att få till */
+@media (max-width: 1056px) {
+  .grid-container {
+ width: 100%;
+
+}
+.img-offset{
+width: 10rem;
+height: 40%;
+}
+.p{
+  font-size: 0.5rem;
+}
+.h1{
+font-size: 1rem;
+}
+
+.btn-ml .button-google{
+  min-width: 200px;
+  width: 100vw;
+}
+}
+
+@media (max-width: 962px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+  .img.img-robot{
+    width: 20px;
+  }
+  .btn-ml .button-google{
+    width: 80px;
+  }
+}
+}
+
+@media only screen and (max-width: 898px) {
+  .btn-wrapper {
+    display: flex;
+    width: 250px; 
+  }
+  .btn-ml .button-google{
+    min-width: 200px;
+    width: 100vw;
+  }
+}
+/* Kunde inte ändra fontsizen här */
+@media (max-width: 700px) {
+  h1 {
+    font-size: 1rem;
+  }
+}
+/* Även här kunde jag inte få fontsizen i "sign up with google"
+ att bli mindre */
+.button-google.googlesign{
+  font-size: 1px;
+}
+
+
